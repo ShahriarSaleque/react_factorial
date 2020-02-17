@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+export default function App() {
+  const [number, setnumber] = useState(0);
+
+  const factorial = () => {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Factorial Calculator</h1>
+      <form onSubmit={this.factorial}>
+        <input type="number" name="number" placeholder="Enter a number..." />
+        <br />
+        <button>Calculate Factorial</button>
+      </form>
+      <h2>Factorial: {0}</h2>
     </div>
   );
 }
-
-export default App;
