@@ -5,13 +5,18 @@ export default function App() {
   const [factorial, setfactorial] = useState(0);
 
   const submit = e => {
-    let i = 1;
-    let p = 1;
-    while (i <= number) {
-      p = p * i;
-      i = i + 1;
+    if (number == 0 || number == 1) {
+      setfactorial(1);
+    } else {
+      let i = 1;
+      let p = 1;
+      while (i <= number) {
+        p = p * i;
+        i = i + 1;
+      }
+      setfactorial(p);
     }
-    setfactorial(p);
+
     e.preventDefault();
   };
   return (
